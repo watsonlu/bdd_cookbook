@@ -1,4 +1,4 @@
-#Enable Administrator Welcome1234
+#Enable Administrator
 user "Administrator" do
   password ['bdd_cookbook']["user"]["password"]
 end

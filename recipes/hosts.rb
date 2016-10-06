@@ -1,3 +1,5 @@
+#Add APNS servers to hostfile
+
 hostsfile_entry '17.172.238.216' do
   hostname  'apns1'
   action    :create_if_missing

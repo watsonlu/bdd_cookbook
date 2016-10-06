@@ -1,4 +1,4 @@
-#installed last as it needs a reset
+#installed seperately as it needs a reset. Keeping it in its own recipe prevents packer from stopping
 chocolatey_package "powershell" do
   source node['bdd_cookbook']["chocolatey"]["source"]
   version node['bdd_cookbook']["chocolatey"]["powershell"]["version"]

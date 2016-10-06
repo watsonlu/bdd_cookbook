@@ -1,3 +1,5 @@
+#Disable all firewall rules, then block APNS
+
 #include_recipe 'netsh_firewall'
 log "disabling firewall"
 netsh_firewall_profile 'all' do
