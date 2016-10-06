@@ -1,0 +1,13 @@
+default['bdd_cookbook']['chocolatey']['source'] = "http://artifactory/artifactory/api/nuget/chocolatey"
+default['bdd_cookbook']['chocolatey']['powershell']['version'] = "5.0.10586.20151218"
+default['bdd_cookbook']['sql_server']['version'] = '2008R2'
+default['bdd_cookbook']['chocolatey']['packages']['vcredist2013'] = "12.0.30501.20150616"
+default['bdd_cookbook']['chocolatey']['packages']['jdk7'] = "7.0.79.1"
+default['bdd_cookbook']['chocolatey']['packages']['nunit.install'] = "3.4.0"
+default['bdd_cookbook']['chocolatey']['packages']['7zip.install'] = "16.02.0.20160811"
+default['bdd_cookbook']['chocolatey']['packages']['nuget.commandline'] = "3.4.3"
+default['bdd_cookbook']['chocolatey']['packages']['aspnetmvc4.install'] = "4.0.20714.0"
+default['bdd_cookbook']['cli']['cli_folder'] = "C:\\CLIs"
+default['bdd_cookbook']['cli']['7za_path'] = "http://artifactory/artifactory/ops/cli/7za.exe"
+default['bdd_cookbook']['user']['password'] = "testing"
+default['bdd_cookbook']['timezone'] = "Eastern Standard Time"

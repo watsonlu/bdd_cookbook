@@ -1,0 +1,35 @@
+---
+driver:
+  name: vagrant
+  boot_timeout: 1200
+  customize:
+    memory: 8048
+    cpus: 4
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: 'mwrock/Windows2012R2'
+    transport:
+      name: winrm
+      elevated: true
+
+suites:
+  - name: default
+    run_list:
+      - ['recipe[bdd_cookbook::users]','recipe[bdd_cookbook::timezone]','recipe[sql_server::client]','recipe[sql_server::server]', 'recipe[bdd_cookbook::packages]','recipe[windows_rdp::default]', 'recipe[bdd_cookbook::hosts]', 'recipe[bdd_cookbook::firewall]', 'recipe[bdd_cookbook::aspnet]', 'recipe[windows_autologin::default]', 'recipe[bdd_cookbook::registry]']
+    attributes:
+      sql_server:
+        accept_eula: true
+        version: "2008R2"
+        server_sa_password: "testing"
+      windows_autologin:
+        username: Administrator
+        password: testing
+      net_35:
+        sxs_source: "http://artifactory/artifactory/ops/tools/sxs/sxs.7z"
+      windows_rdp:
+        Configure: true
+        AllowConnections: 'yes'
+        ConfigureFirewall: 'leave'
